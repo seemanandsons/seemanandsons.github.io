@@ -3,345 +3,1053 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SEEMAN & SON'S HARDWARE (PVT) LTD - Quality building materials and hardware in Irakkamam, Ampara.">
 <title>SEEMAN & SON'S HARDWARE (PVT) LTD</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-font-family:Arial,sans-serif;
-background:#f4f7fb;
-color:#12345b;
-line-height:1.6
+:root{
+--blue:#073b78;
+--blue2:#0b63b7;
+--red:#e71920;
+--green:#16a34a;
+--light:#f4f8fd;
+--dark:#122033;
+--muted:#617087;
+--white:#fff;
+--shadow:0 12px 35px rgba(7,59,120,.12);
 }
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:var(--dark);
+line-height:1.6;
+background:#fff;
+}
+
+a{text-decoration:none;color:inherit}
+
+.container{
+width:min(1120px,92%);
+margin:auto;
+}
+
+/* HEADER */
 header{
-background:#071f41;
-padding:10px 5%;
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(255,255,255,.97);
+box-shadow:0 2px 18px rgba(0,0,0,.08);
+}
+
+.nav{
+height:78px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-position:sticky;
-top:0;
-z-index:10
+gap:20px;
 }
-header img{width:70px;height:70px;object-fit:contain}
-nav a{
-color:white;
-text-decoration:none;
-margin:0 8px;
-font-size:14px
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+font-weight:800;
+color:var(--blue);
 }
-.hero{
-background:linear-gradient(135deg,#062c59,#0876b9);
-color:white;
-text-align:center;
-padding:45px 20px
+
+.brand img{
+width:58px;
+height:58px;
+object-fit:contain;
 }
-.hero img{
-width:210px;
-max-width:80%;
-background:white;
-border-radius:50%;
-padding:8px;
-margin-bottom:20px
+
+.brand span{
+font-size:15px;
+line-height:1.2;
 }
-.hero h1{font-size:30px;margin-bottom:8px}
-.hero h2{font-size:20px;color:#ffdf3b;margin-bottom:12px}
-.hero p{max-width:650px;margin:auto}
-.buttons{margin-top:25px}
-.btn{
-display:inline-block;
-padding:13px 20px;
-margin:5px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold
-}
-.whatsapp{background:#25d366;color:white}
-.call{background:#e31b23;color:white}
-.section{
-padding:45px 6%;
-text-align:center
-}
-.section h2{
-font-size:28px;
-margin-bottom:10px;
-color:#062c59
-}
-.section-title{
-color:#e31b23;
-font-size:13px;
-font-weight:bold;
-letter-spacing:2px
-}
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:18px;
-margin-top:25px
-}
-.product{
-background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 3px 15px #00000015
-}
-.product-icon{
-font-size:45px;
-margin-bottom:10px
-}
-.product h3{
-color:#062c59;
-margin-bottom:7px
-}
-.product p{
-font-size:13px;
-color:#666;
-margin-bottom:12px
-}
-.product .btn{
-font-size:12px;
-padding:9px 13px
-}
-.about{
-background:white
-}
-.info{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:15px;
-margin-top:25px
-}
-.info-box{
-background:#f1f6fb;
-padding:20px;
-border-radius:12px
-}
-.info-box strong{
+
+.brand small{
 display:block;
-font-size:22px;
-color:#e31b23
+color:var(--red);
+font-size:10px;
+letter-spacing:1px;
+margin-top:3px;
 }
-.contact{
-background:#062c59;
-color:white
+
+.links{
+display:flex;
+gap:24px;
+align-items:center;
+font-weight:700;
+font-size:14px;
 }
-.contact h2{color:white}
-.contact-box{
-max-width:650px;
-margin:25px auto;
-background:#123d69;
-padding:25px;
-border-radius:15px
+
+.links a:hover{
+color:var(--red);
 }
-.contact-box p{margin:10px 0}
-footer{
-background:#04182f;
+
+.menu{
+display:none;
+border:0;
+background:none;
+font-size:28px;
+color:var(--blue);
+}
+
+/* HERO */
+.hero{
+background:
+linear-gradient(135deg,#062e61 0%,#0a4e99 55%,#e71920 150%);
 color:white;
-text-align:center;
-padding:20px;
-font-size:12px
+padding:78px 0 70px;
+overflow:hidden;
 }
-@media(max-width:600px){
-header img{width:55px;height:55px}
-nav a{font-size:11px;margin:3px}
-.hero h1{font-size:25px}
-.hero h2{font-size:17px}
-.section{padding:35px 15px}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.05fr .95fr;
+align-items:center;
+gap:45px;
+}
+
+.badge{
+display:inline-block;
+background:rgba(255,255,255,.14);
+border:1px solid rgba(255,255,255,.28);
+padding:8px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:700;
+margin-bottom:18px;
+}
+
+.hero h1{
+font-size:clamp(38px,5vw,64px);
+line-height:1.02;
+margin-bottom:18px;
+}
+
+.hero h1 span{
+color:#ffeaec;
+}
+
+.hero p{
+font-size:18px;
+max-width:620px;
+color:#e9f2ff;
+margin-bottom:28px;
+}
+
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:13px 20px;
+border-radius:9px;
+font-weight:800;
+border:2px solid transparent;
+transition:.2s;
+}
+
+.btn-red{
+background:var(--red);
+color:white;
+}
+
+.btn-red:hover{
+transform:translateY(-2px);
+background:#c91016;
+}
+
+.btn-white{
+background:white;
+color:var(--blue);
+}
+
+.btn-white:hover{
+transform:translateY(-2px);
+}
+
+.hero-logo{
+display:flex;
+justify-content:center;
+}
+
+.hero-logo img{
+width:min(440px,90%);
+filter:drop-shadow(0 18px 30px rgba(0,0,0,.28));
+border-radius:50%;
+}
+
+/* STATS */
+.stats{
+margin-top:-28px;
+position:relative;
+z-index:2;
+}
+
+.stats-grid{
+background:white;
+border-radius:16px;
+box-shadow:var(--shadow);
+display:grid;
+grid-template-columns:repeat(3,1fr);
+padding:25px;
+}
+
+.stat{
+text-align:center;
+border-right:1px solid #e6ebf2;
+}
+
+.stat:last-child{
+border:0;
+}
+
+.stat strong{
+display:block;
+color:var(--blue);
+font-size:27px;
+}
+
+.stat span{
+color:var(--muted);
+font-size:13px;
+font-weight:700;
+}
+
+/* SECTIONS */
+section{
+padding:78px 0;
+}
+
+.section-head{
+text-align:center;
+max-width:720px;
+margin:0 auto 42px;
+}
+
+.eyebrow{
+color:var(--red);
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:2px;
+font-size:12px;
+}
+
+.section-head h2{
+font-size:38px;
+color:var(--blue);
+margin:8px 0;
+}
+
+.section-head p{
+color:var(--muted);
+}
+
+/* PRODUCTS */
+.products{
+background:var(--light);
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+padding:20px 15px;
+box-shadow:0 5px 20px rgba(0,0,0,.06);
+text-align:center;
+border:1px solid #edf1f7;
+transition:.2s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:var(--shadow);
+}
+
+.product-visual{
+height:145px;
+border-radius:14px;
+margin-bottom:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:72px;
+background:linear-gradient(145deg,#eef5ff,#ffffff);
+border:1px solid #e7eef8;
+}
+
+.card h3{
+font-size:18px;
+color:var(--blue);
+}
+
+.card p{
+font-size:12px;
+color:var(--muted);
+margin-top:5px;
+min-height:38px;
+}
+
+.wa-product{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+margin-top:14px;
+padding:9px 12px;
+border-radius:8px;
+background:var(--green);
+color:#fff;
+font-size:12px;
+font-weight:800;
+transition:.2s;
+}
+
+.wa-product:hover{
+transform:translateY(-2px);
+background:#128c47;
+}
+
+/* ABOUT */
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:45px;
+align-items:center;
+}
+
+.about-box{
+background:linear-gradient(145deg,#f4f8ff,#fff);
+padding:35px;
+border-radius:20px;
+border-left:6px solid var(--red);
+box-shadow:var(--shadow);
+}
+
+.about-box h3{
+font-size:29px;
+color:var(--blue);
+margin-bottom:12px;
+}
+
+.about-box p{
+color:var(--muted);
+}
+
+.checklist{
+display:grid;
+gap:13px;
+margin-top:22px;
+}
+
+.check{
+display:flex;
+gap:10px;
+align-items:flex-start;
+font-weight:700;
+}
+
+.check b{
+color:var(--red);
+}
+
+/* CONTACT */
+.contact{
+background:#071f3e;
+color:white;
+}
+
+.contact .section-head h2{
+color:white;
+}
+
+.contact .section-head p{
+color:#c8d7ea;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.contact-card{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.14);
+padding:28px;
+border-radius:18px;
+}
+
+.contact-item{
+display:flex;
+gap:14px;
+margin:17px 0;
+}
+
+.contact-icon{
+width:42px;
+height:42px;
+border-radius:10px;
+background:var(--red);
+display:grid;
+place-items:center;
+flex:0 0 42px;
+}
+
+.contact-item small{
+color:#aebed2;
+display:block;
+}
+
+.contact-item strong{
+font-size:16px;
+}
+
+.map-btn{
+margin-top:8px;
+width:100%;
+}
+
+.hours{
+margin-top:22px;
+padding:16px;
+background:rgba(255,255,255,.07);
+border-radius:12px;
+font-weight:700;
+}
+
+.hours span{
+color:#7dffb1;
+}
+
+/* FOOTER */
+footer{
+background:#04172e;
+color:#aebed2;
+text-align:center;
+padding:25px 15px;
+font-size:13px;
+}
+
+.footer-brand{
+color:white;
+font-weight:800;
+font-size:16px;
+margin-bottom:5px;
+}
+
+/* FLOATING WHATSAPP */
+.floating{
+position:fixed;
+right:20px;
+bottom:20px;
+z-index:999;
+background:#19a957;
+color:#fff;
+width:58px;
+height:58px;
+border-radius:50%;
+display:grid;
+place-items:center;
+font-size:27px;
+box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+.hero-grid,
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.hero{
+text-align:center;
+}
+
+.hero p{
+margin-left:auto;
+margin-right:auto;
+}
+
+.buttons{
+justify-content:center;
+}
+
+.hero-logo{
+order:-1;
+}
+
+.product-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.links{
+gap:13px;
+}
+
+}
+
+@media(max-width:650px){
+
+.nav{
+height:68px;
+}
+
+.brand img{
+width:48px;
+height:48px;
+}
+
+.brand span{
+font-size:12px;
+}
+
+.links{
+display:none;
+flex-direction:column;
+position:absolute;
+top:68px;
+right:0;
+background:white;
+width:190px;
+padding:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.menu{
+display:block;
+}
+
+.hero{
+padding:55px 0;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.stats-grid{
+grid-template-columns:1fr;
+padding:10px;
+}
+
+.stat{
+border-right:0;
+border-bottom:1px solid #e6ebf2;
+padding:13px;
+}
+
+.stat:last-child{
+border-bottom:0;
+}
+
+.product-grid{
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+.card{
+padding:15px 9px;
+}
+
+.product-visual{
+height:120px;
+font-size:58px;
+}
+
+.section-head h2{
+font-size:31px;
+}
+
+section{
+padding:60px 0;
+}
+
+.about-box{
+padding:25px;
+}
+
+.hero-logo img{
+width:75%;
+}
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-<img src="logo.png" alt="SEEMAN & SON'S HARDWARE">
-<nav>
+<div class="container nav">
+
+<a class="brand" href="#home">
+<img src="logo.png" alt="SEEMAN & SON'S logo">
+<span>
+SEEMAN & SON'S
+<small>HARDWARE (PVT) LTD</small>
+</span>
+</a>
+
+<nav class="links">
 <a href="#home">Home</a>
 <a href="#products">Products</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
+
+<button class="menu" aria-label="Menu"
+onclick="document.querySelector('.links').style.display=document.querySelector('.links').style.display==='flex'?'none':'flex'">
+☰
+</button>
+
+</div>
 </header>
 
+<main>
+
+<!-- HERO -->
 <section class="hero" id="home">
+<div class="container hero-grid">
 
-<img src="logo.png" alt="SEEMAN & SON'S HARDWARE Logo">
+<div>
 
-<h1>SEEMAN & SON'S HARDWARE</h1>
-<h2>HARDWARE (PVT) LTD</h2>
+<div class="badge">
+ESTABLISHED 2012 • IRAKKAMAM, AMPARA
+</div>
+
+<h1>
+Build Better.<br>
+<span>Build With Us.</span>
+</h1>
 
 <p>
-Trusted building materials and hardware supplier in Irakkamam, Ampara.
-Serving customers since 2012.
+Your trusted destination for quality building materials,
+hardware, plumbing, bathroom and gardening products.
 </p>
 
 <div class="buttons">
-<a class="btn whatsapp"
-href="https://wa.me/94712223505?text=Hello%20SEEMAN%20%26%20SON'S%20HARDWARE,%20I%20would%20like%20to%20make%20an%20enquiry."
+
+<a class="btn btn-red"
+href="https://wa.me/94712223505"
 target="_blank">
 💬 WhatsApp Us
 </a>
 
-<a class="btn call" href="tel:+94712223505">
+<a class="btn btn-white"
+href="tel:+94712223505">
 📞 Call Now
 </a>
+
 </div>
 
-</section>
-
-
-<section class="section" id="products">
-
-<div class="section-title">WHAT WE SELL</div>
-<h2>Our Products</h2>
-
-<p>
-Quality building materials, plumbing, bathroom and gardening products.
-</p>
-
-<div class="products">
-
-<div class="product">
-<div class="product-icon">🧱</div>
-<h3>Cement</h3>
-<p>Quality cement for construction.</p>
-<a class="btn whatsapp" target="_blank"
-href="https://wa.me/94712223505?text=Hello,%20I%20am%20interested%20in%20Cement.%20Please%20send%20me%20details%20and%20price.">
-💬 Enquire
-</a>
 </div>
 
-<div class="product">
-<div class="product-icon">🔩</div>
-<h3>Steel</h3>
-<p>Steel and iron construction materials.</p>
-<a class="btn whatsapp" target="_blank"
-href="https://wa.me/94712223505?text=Hello,%20I%20am%20interested%20in%20Steel.%20Please%20send%20me%20details%20and%20price.">
-💬 Enquire
-</a>
-</div>
-
-<div class="product">
-<div class="product-icon">⛏️</div>
-<h3>Mammootty</h3>
-<p>Strong tools for construction work.</p>
-<a class="btn whatsapp" target="_blank"
-href="https://wa.me/94712223505?text=Hello,%20I%20am%20interested%20in%20Mammootty.%20Please%20send%20me%20details%20and%20price.">
-💬 Enquire
-</a>
-</div>
-
-<div class="product">
-<div class="product-icon">🪣</div>
-<h3>Bucket</h3>
-<p>Practical buckets for home and work.</p>
-<a class="btn whatsapp" target="_blank"
-href="https://wa.me/94712223505?text=Hello,%20I%20am%20interested%20in%20Buckets.%20Please%20send%20me%20details%20and%20price.">
-💬 Enquire
-</a>
-</div>
-
-<div class="product">
-<div class="product-icon">🚿</div>
-<h3>Bathroom Basin</h3>
-<p>Bathroom basins and fittings.</p>
-<a class="btn whatsapp" target="_blank"
-href="https://wa.me/94712223505?text=Hello,%20I%20am%20interested%20in%20Bathroom%20Basins.%20Please%20send%20me%20details%20and%20price.">
-💬 Enquire
-</a>
-</div>
-
-<div class="product">
-<div class="product-icon">🎨</div>
-<h3>Wall Filler</h3>
-<p>Finishing products for walls.</p>
-<a class="btn whatsapp" target="_blank"
-href="https://wa.me/94712223505?text=Hello,%20I%20am%20interested%20in%20Wall%20Filler.%20Please%20send%20me%20details%20and%20price.">
-💬 Enquire
-</a>
-</div>
-
-<div class="product">
-<div class="product-icon">🌱</div>
-<h3>Garden Hose</h3>
-<p>Hoses for gardening and water use.</p>
-<a class="btn whatsapp" target="_blank"
-href="https://wa.me/94712223505?text=Hello,%20I%20am%20interested%20in%20Garden%20Hose.%20Please%20send%20me%20details%20and%20price.">
-💬 Enquire
-</a>
-</div>
-
-<div class="product">
-<div class="product-icon">🚰</div>
-<h3>Taps</h3>
-<p>Reliable taps and water fittings.</p>
-<a class="btn whatsapp" target="_blank"
-href="https://wa.me/94712223505?text=Hello,%20I%20am%20interested%20in%20Taps.%20Please%20send%20me%20details%20and%20price.">
-💬 Enquire
-</a>
-</div>
-
-<div class="product">
-<div class="product-icon">🔧</div>
-<h3>Pipes & Fittings</h3>
-<p>Plumbing pipes and fittings.</p>
-<a class="btn whatsapp" target="_blank"
-href="https://wa.me/94712223505?text=Hello,%20I%20am%20interested%20in%20Pipes%20and%20Fittings.%20Please%20send%20me%20details%20and%20price.">
-💬 Enquire
-</a>
-</div>
-
-<div class="product">
-<div class="product-icon">🚪</div>
-<h3>Bathroom Doors</h3>
-<p>Practical bathroom door options.</p>
-<a class="btn whatsapp" target="_blank"
-href="https://wa.me/94712223505?text=Hello,%20I%20am%20interested%20in%20Bathroom%20Doors.%20Please%20send%20me%20details%20and%20price.">
-💬 Enquire
-</a>
-</div>
-
-<div class="product">
-<div class="product-icon">🛒</div>
-<h3>Wheelbarrow</h3>
-<p>Useful equipment for construction.</p>
-<a class="btn whatsapp" target="_blank"
-href="https://wa.me/94712223505?text=Hello,%20I%20am%20interested%20in%20Wheelbarrows.%20Please%20send%20me%20details%20and%20price.">
-💬 Enquire
-</a>
+<div class="hero-logo">
+<img src="logo.png" alt="SEEMAN & SON'S HARDWARE logo">
 </div>
 
 </div>
 </section>
 
 
-<section class="section about" id="about">
+<!-- STATS -->
+<div class="stats">
+<div class="container">
 
-<div class="section-title">ABOUT US</div>
-<h2>Trusted Hardware Since 2012</h2>
+<div class="stats-grid">
 
-<p>
-SEEMAN & SON'S HARDWARE (PVT) LTD is a hardware and building-materials
-business located on Main Street, Irakkamam, Ampara.
-Since 2012, we have served customers with building materials,
-plumbing, bathroom and gardening products.
-</p>
-
-<div class="info">
-
-<div class="info-box">
+<div class="stat">
 <strong>2012</strong>
-Serving Since
+<span>Serving Since</span>
 </div>
 
-<div class="info-box">
+<div class="stat">
 <strong>11+</strong>
-Product Categories
+<span>Product Categories</span>
 </div>
 
-<div class="info-box">
+<div class="stat">
 <strong>7 AM – 9 PM</strong>
-Open Daily
+<span>Open Daily</span>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">
+What We Sell
+</div>
+
+<h2>
+Our Products
+</h2>
+
+<p>
+Everything you need for construction, home improvement,
+plumbing and outdoor work.
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- CEMENT -->
+<div class="card">
+
+<div class="product-visual">
+🧱
+</div>
+
+<h3>Cement</h3>
+
+<p>
+Quality cement for construction.
+</p>
+
+<a class="wa-product"
+href="https://wa.me/94712223505?text=Hello%20SEEMAN%20%26%20SON%27S%20HARDWARE%2C%20I%20am%20interested%20in%20Cement.%20Please%20send%20me%20the%20available%20options%20and%20price."
+target="_blank">
+💬 Enquire on WhatsApp
+</a>
+
+</div>
+
+
+<!-- STEEL -->
+<div class="card">
+
+<div class="product-visual">
+🔩
+</div>
+
+<h3>Steel</h3>
+
+<p>
+Steel and construction materials.
+</p>
+
+<a class="wa-product"
+href="https://wa.me/94712223505?text=Hello%20SEEMAN%20%26%20SON%27S%20HARDWARE%2C%20I%20am%20interested%20in%20Steel.%20Please%20send%20me%20the%20available%20options%20and%20price."
+target="_blank">
+💬 Enquire on WhatsApp
+</a>
+
+</div>
+
+
+<!-- MAMMOOTTY -->
+<div class="card">
+
+<div class="product-visual">
+🛠️
+</div>
+
+<h3>Mammootty</h3>
+
+<p>
+Strong tools for everyday work.
+</p>
+
+<a class="wa-product"
+href="https://wa.me/94712223505?text=Hello%20SEEMAN%20%26%20SON%27S%20HARDWARE%2C%20I%20am%20interested%20in%20Mammootty.%20Please%20send%20me%20the%20available%20options%20and%20price."
+target="_blank">
+💬 Enquire on WhatsApp
+</a>
+
+</div>
+
+
+<!-- BUCKET -->
+<div class="card">
+
+<div class="product-visual">
+🪣
+</div>
+
+<h3>Bucket</h3>
+
+<p>
+Practical household buckets.
+</p>
+
+<a class="wa-product"
+href="https://wa.me/94712223505?text=Hello%20SEEMAN%20%26%20SON%27S%20HARDWARE%2C%20I%20am%20interested%20in%20Bucket.%20Please%20send%20me%20the%20available%20options%20and%20price."
+target="_blank">
+💬 Enquire on WhatsApp
+</a>
+
+</div>
+
+
+<!-- BASIN -->
+<div class="card">
+
+<div class="product-visual">
+🚿
+</div>
+
+<h3>Bathroom Basin</h3>
+
+<p>
+Bathroom essentials and fittings.
+</p>
+
+<a class="wa-product"
+href="https://wa.me/94712223505?text=Hello%20SEEMAN%20%26%20SON%27S%20HARDWARE%2C%20I%20am%20interested%20in%20Bathroom%20Basin.%20Please%20send%20me%20the%20available%20options%20and%20price."
+target="_blank">
+💬 Enquire on WhatsApp
+</a>
+
+</div>
+
+
+<!-- WALL FILLER -->
+<div class="card">
+
+<div class="product-visual">
+🎨
+</div>
+
+<h3>Wall Filler</h3>
+
+<p>
+Finishing products for walls.
+</p>
+
+<a class="wa-product"
+href="https://wa.me/94712223505?text=Hello%20SEEMAN%20%26%20SON%27S%20HARDWARE%2C%20I%20am%20interested%20in%20Wall%20Filler.%20Please%20send%20me%20the%20available%20options%20and%20price."
+target="_blank">
+💬 Enquire on WhatsApp
+</a>
+
+</div>
+
+
+<!-- GARDEN HOSE -->
+<div class="card">
+
+<div class="product-visual">
+🌱
+</div>
+
+<h3>Garden Hose</h3>
+
+<p>
+Hoses for garden and outdoor use.
+</p>
+
+<a class="wa-product"
+href="https://wa.me/94712223505?text=Hello%20SEEMAN%20%26%20SON%27S%20HARDWARE%2C%20I%20am%20interested%20in%20Garden%20Hose.%20Please%20send%20me%20the%20available%20options%20and%20price."
+target="_blank">
+💬 Enquire on WhatsApp
+</a>
+
+</div>
+
+
+<!-- TAPS -->
+<div class="card">
+
+<div class="product-visual">
+🚰
+</div>
+
+<h3>Taps</h3>
+
+<p>
+Reliable water taps and fittings.
+</p>
+
+<a class="wa-product"
+href="https://wa.me/94712223505?text=Hello%20SEEMAN%20%26%20SON%27S%20HARDWARE%2C%20I%20am%20interested%20in%20Taps.%20Please%20send%20me%20the%20available%20options%20and%20price."
+target="_blank">
+💬 Enquire on WhatsApp
+</a>
+
+</div>
+
+
+<!-- PIPES -->
+<div class="card">
+
+<div class="product-visual">
+🔵
+</div>
+
+<h3>Pipes & Fittings</h3>
+
+<p>
+Plumbing pipes and accessories.
+</p>
+
+<a class="wa-product"
+href="https://wa.me/94712223505?text=Hello%20SEEMAN%20%26%20SON%27S%20HARDWARE%2C%20I%20am%20interested%20in%20Pipes%20%26%20Fittings.%20Please%20send%20me%20the%20available%20options%20and%20price."
+target="_blank">
+💬 Enquire on WhatsApp
+</a>
+
+</div>
+
+
+<!-- BATHROOM DOORS -->
+<div class="card">
+
+<div class="product-visual">
+🚪
+</div>
+
+<h3>Bathroom Doors</h3>
+
+<p>
+Practical bathroom door options.
+</p>
+
+<a class="wa-product"
+href="https://wa.me/94712223505?text=Hello%20SEEMAN%20%26%20SON%27S%20HARDWARE%2C%20I%20am%20interested%20in%20Bathroom%20Doors.%20Please%20send%20me%20the%20available%20options%20and%20price."
+target="_blank">
+💬 Enquire on WhatsApp
+</a>
+
+</div>
+
+
+<!-- WHEELBARROW -->
+<div class="card">
+
+<div class="product-visual">
+🛒
+</div>
+
+<h3>Wheelbarrow</h3>
+
+<p>
+Useful equipment for construction.
+</p>
+
+<a class="wa-product"
+href="https://wa.me/94712223505?text=Hello%20SEEMAN%20%26%20SON%27S%20HARDWARE%2C%20I%20am%20interested%20in%20Wheelbarrow.%20Please%20send%20me%20the%20available%20options%20and%20price."
+target="_blank">
+💬 Enquire on WhatsApp
+</a>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="container about-grid">
+
+<div>
+
+<div class="eyebrow">
+About Us
+</div>
+
+<h2 style="font-size:40px;color:var(--blue);margin:8px 0 15px">
+Trusted Hardware Since 2012
+</h2>
+
+<p style="color:var(--muted);font-size:17px">
+
+SEEMAN & SON'S HARDWARE (PVT) LTD is a hardware
+and building-materials business located on Main Street,
+Irakkamam, Ampara.
+
+Since 2012, we have served customers with a wide range
+of construction, plumbing, bathroom and gardening products.
+
+</p>
+
+<div class="checklist">
+
+<div class="check">
+<b>✓</b> Wide range of building materials
+</div>
+
+<div class="check">
+<b>✓</b> Hardware and plumbing essentials
+</div>
+
+<div class="check">
+<b>✓</b> Convenient daily opening hours
+</div>
+
+<div class="check">
+<b>✓</b> Friendly local service
+</div>
+
+</div>
+
+</div>
+
+
+<div class="about-box">
+
+<h3>
+Visit Our Store
+</h3>
+
+<p>
+<strong>
+Main Street, Irakkamam, Ampara
+</strong>
+<br>
+Opposite the National Water Supply and Drainage Board.
+</p>
+
+<div class="hours">
+🕖 Open every day:
+<span>7:00 AM – 9:00 PM</span>
+</div>
+
+<a class="btn btn-red map-btn"
+href="https://maps.app.goo.gl/AshbaNsNSjbzV3L1A"
+target="_blank">
+📍 Get Directions
+</a>
+
 </div>
 
 </div>
@@ -349,61 +1057,168 @@ Open Daily
 </section>
 
 
-<section class="section contact" id="contact">
+<!-- CONTACT -->
+<section class="contact" id="contact">
 
-<div class="section-title">GET IN TOUCH</div>
-<h2>Contact SEEMAN & SON'S</h2>
+<div class="container">
 
-<div class="contact-box">
+<div class="section-head">
 
-<p>📞 <strong>Phone:</strong> +94 71 222 3505</p>
+<div class="eyebrow">
+Get In Touch
+</div>
 
-<p>💬 <strong>WhatsApp:</strong> +94 71 222 3505</p>
-
-<p>✉️ <strong>Email:</strong> lebbeals@gmail.com</p>
+<h2>
+Contact SEEMAN & SON'S
+</h2>
 
 <p>
-📍 <strong>Address:</strong><br>
-Main Street, Irakkamam, Ampara<br>
+Call, WhatsApp or visit our store in Irakkamam.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<div class="contact-item">
+
+<div class="contact-icon">
+📞
+</div>
+
+<div>
+<small>Phone</small>
+
+<strong>
+<a href="tel:+94712223505">
++94 71 222 3505
+</a>
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+💬
+</div>
+
+<div>
+
+<small>WhatsApp</small>
+
+<strong>
+<a href="https://wa.me/94712223505" target="_blank">
++94 71 222 3505
+</a>
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+✉️
+</div>
+
+<div>
+
+<small>Email</small>
+
+<strong>
+<a href="mailto:lebbeals@gmail.com">
+lebbeals@gmail.com
+</a>
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="contact-item">
+
+<div class="contact-icon">
+📍
+</div>
+
+<div>
+
+<small>Address</small>
+
+<strong>
+Main Street, Irakkamam, Ampara
+</strong>
+
+<p style="color:#aebed2;margin-top:4px">
 Opposite the National Water Supply and Drainage Board
 </p>
 
-<p>🕖 <strong>Opening Hours:</strong><br>
-Every day: 7:00 AM – 9:00 PM
-</p>
+</div>
 
-<div class="buttons">
+</div>
 
-<a class="btn whatsapp"
-href="https://wa.me/94712223505"
-target="_blank">
-💬 WhatsApp
-</a>
 
-<a class="btn call"
-href="tel:+94712223505">
-📞 Call
-</a>
-
-<a class="btn"
-style="background:white;color:#062c59"
+<a class="btn btn-red map-btn"
 href="https://maps.app.goo.gl/AshbaNsNSjbzV3L1A"
 target="_blank">
-📍 Google Maps
+📍 Open Google Maps
+</a>
+
+
+<a class="btn btn-white map-btn"
+href="https://www.facebook.com/share/1JpTkyyzV3/"
+target="_blank">
+📘 Visit Facebook Page
 </a>
 
 </div>
 
+</div>
 </div>
 
 </section>
 
+</main>
 
+
+<!-- FOOTER -->
 <footer>
-SEEMAN & SON'S HARDWARE (PVT) LTD<br>
-Quality Building Materials & Hardware • Since 2012<br>
-© 2026 SEEMAN & SON'S HARDWARE
+
+<div class="footer-brand">
+SEEMAN & SON'S HARDWARE (PVT) LTD
+</div>
+
+Quality Building Materials & Hardware • Since 2012
+
+<br>
+
+© 2026 SEEMAN & SON'S HARDWARE. All rights reserved.
+
 </footer>
+
+
+<!-- FLOATING WHATSAPP -->
+<a class="floating"
+href="https://wa.me/94712223505"
+target="_blank"
+aria-label="WhatsApp">
+💬
+</a>
 
 </body>
   </html>
